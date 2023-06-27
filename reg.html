@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Регистрация</title>
+	<link rel="icon" href="icon-round.png" type="image/x-icon">
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		.form-group label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		.form-group input {
+			width: 96%;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
+
+		.form-group input[type="submit"],
+		.form-group input[type="reset"] {
+			width: auto;
+			padding: 8px 20px;
+			color: #fff;
+			background-color: #ff0000;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		.form-group input[type="submit"]:hover,
+		.form-group input[type="reset"]:hover {
+			background-color: #ff0000;
+		}
+
+		.error-message {
+			color: red;
+		}
+	</style>
+	<script>
+		function sendForm() {
+
+			//Проверяем, введён ли логин
+			if (document.forms[0].login.value.trim() === "") {
+				alert("Введите логин.");
+				document.forms[0].login.focus(); // Устанавливаем фокус на поле "Логин"
+				return false;
+			}
+
+			// Проверяем, что в поле "Почта" введено значение
+			if (document.forms[0].email.value.trim() === "") {
+				alert("Введите почту.");
+				document.forms[0].email.focus(); // Устанавливаем фокус на поле "Почта"
+				return false;
+			}
+
+			var mail = "@mail.ru";
+			var gmail = "@gmail.com";
+			var emailValue = document.forms[0].email.value;
+
+			if (emailValue.includes(mail) || emailValue.includes(gmail)) {
+				// Подстрока найдена
+				return true;
+			} else {
+				// Подстрока не найдена
+				document.forms[0].email.value = "";
+				document.forms[0].email.focus(); // Устанавливаем фокус на поле "Почта" с задержкой
+				alert("Неверный формат почты.");
+				return false;
+			}
+
+			// Проверка, что в поле номер номер
+			if (document.forms[0].number.value.trim() === "") {
+				alert("Введите номер телефона.");
+				document.forms[0].number.focus(); // Устанавливаем фокус на поле "Номер телефона"
+				return false;
+			}
+
+			// Проверяем, совпадают ли значения полей "Пароль" и "Повторите пароль"
+			if (document.forms[0].pass.value !== document.forms[0].cur_pass.value) {
+				alert("Пароли не совпадают.");
+				document.forms[0].pass.value = ""; // Очищаем поле "Пароль"
+				document.forms[0].cur_pass.value = ""; // Очищаем поле "Повторите пароль"
+				document.forms[0].pass.focus(); // Устанавливаем фокус на поле "Пароль"
+				return false;
+			}
+			// Все проверки прошли успешно, можно отправить форму
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<h1><a style="color:red">Radikhub</a></h1>
+		<center>
+			<h2>Регистрация</h2>
+		</center>
+		<p>Заполните форму (все поля обязательны).</p>
+
+		<form action="index.html" onsubmit="return sendForm()">
+			<div class="form-group">
+				<label for="login">Логин:</label>
+				<input type="text" id="login" name="login" pattern="[a-zA-Z0-9._%+-]{1,}">
+			</div>
+			<div class="form-group">
+				<label for="number">Номер телефона:</label>
+				<input type="text" id="number" name="number" placeholder="Формат: 891538264829"
+					pattern="[8]{1}[0-9]{10}" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Адрес электронной почты:</label>
+				<input type="text" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+					required>
+			</div>
+			<div class="form-group">
+				<label for="pass">Пароль:</label>
+				<input type="password" id="pass" name="pass" required>
+			</div>
+			<div class="form-group">
+				<label for="cur_pass">Повторите пароль:</label>
+				<input type="password" id="cur_pass" name="cur_pass" required>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Отправить">
+				<input type="reset" value="Очистить форму">
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
