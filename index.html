@@ -77,11 +77,23 @@
       flex-shrink: 0;
     }
 
-    /* Media queries для адаптивного дизайна на мобильных устройствах */
+    /* Скрыть список меню на мобильных устройствах */
+    .menu-btn {
+      display: none;
+    }
+
+    /* Отображение кнопки меню на мобильных устройствах */
     @media (max-width: 600px) {
-      nav ul li {
+      .menu-btn {
         display: block;
-        margin: 10px 0;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      nav.active ul {
+        display: block;
       }
     }
   </style>
@@ -94,6 +106,7 @@
   </header>
 
   <nav>
+    <button class="menu-btn">&#9776; Меню</button>
     <ul>
       <li><a href="index.html">Главная</a></li>
       <li><a href="2.html">Выбор предмета</a></li>
@@ -110,6 +123,13 @@
   <footer>
     <p>&copy; Radikhub, 2023</p>
   </footer>
+
+  <script>
+    // Добавление обработчика события для кнопки меню
+    document.querySelector('.menu-btn').addEventListener('click', function() {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+  </script>
 
 </body>
 
