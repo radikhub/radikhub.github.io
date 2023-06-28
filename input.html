@@ -44,7 +44,7 @@
         }
 
         .form-group input[type="submit"],
-        .form-group input[type="reset"] {
+        .form-group input[type="button"] {
             width: auto;
             padding: 8px 20px;
             color: #fff;
@@ -55,21 +55,33 @@
         }
 
         .form-group input[type="submit"]:hover,
-        .form-group input[type="reset"]:hover {
-            background-color: #ff0000;
+        .form-group input[type="button"]:hover {
+            background-color: rgb(162, 39, 39);
+            transition: 0.2s;
         }
 
         .error-message {
             color: red;
         }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container input {
+            width: 48%;
+        }
     </style>
 </head>
 
 <body>
-	
+
     <div class="container">
-		<h1><a style="color:red">Radikhub</a></h1>
-        <center><h2>Вход</h2></center>
+        <h1><a style="color:red">Radikhub</a></h1>
+        <center>
+            <h2>Вход</h2>
+        </center>
 
         <form action="index.html" onclick="sendform()">
             <div class="form-group">
@@ -82,17 +94,12 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Вход">
+                <input type="button" value="Регистрация" onclick="window.location.href='reg.html'">
+                <input type="button" value="Продолжить как гость" onclick="window.location.href='index.html'">
             </div>
         </form>
 
-        <form action="reg.html" target="_blank">
-            <div class="form-group">
-                <input type="submit" value="Регистрация">
-            </div>
-        </form>
     </div>
-
-
 
 </body>
 

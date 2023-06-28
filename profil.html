@@ -9,8 +9,12 @@
         <title>Radikhub</title>
         <link rel="icon" href="icon-round.png" type="image/x-icon">
         <style>
-            .a {
+            .radik {
                 text-decoration: none;
+            }
+
+            .text a {
+                background-color: white;
             }
 
             .dropbtn {
@@ -56,11 +60,35 @@
             .show {
                 display: block;
             }
+
+            .form-group input {
+                width: 97%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .form-group input[type="submit"],
+            .form-group input[type="button"] {
+                width: auto;
+                padding: 8px 20px;
+                color: #fff;
+                background-color: #ff0000;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            .form-group input[type="submit"]:hover,
+            .form-group input[type="button"]:hover {
+                background-color: rgb(162, 39, 39);
+                transition: 0.2s;
+            }
         </style>
     </head>
 
 <body>
-    <h1><a href="index.html" style="color:red">Radikhub</a></h1>
+    <h1><a class="radik" href="index.html" style="color:red">Radikhub</a></h1>
 
 
     <div class="dropdown">
@@ -69,7 +97,7 @@
             <a href="index.html">Главная</a>
             <a href="2.html">Выбор предмета</a>
             <a href="5.html">Заказ</a>
-            <a href="3.html">Контакты</a>
+            <a href="contact.html">Контакты</a>
             <a href="profil.html">Профиль</a>
         </div>
     </div>
@@ -94,7 +122,14 @@
         }
     </script>
     <main>
-        <h2>Профиль.</h2>
+        <h2>Профиль</h2>
+        <div class="text">
+            <a>Вы не вошли в свой профиль</a>
+        </div>
+        <div class="form-group">
+            <input type="button" value="Регистрация" onclick="window.location.href='reg.html'">
+            <input type="button" value="Вход" onclick="window.location.href='input.html'">
+        </div>
     </main>
 
 

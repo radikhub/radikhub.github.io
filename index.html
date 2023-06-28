@@ -3,104 +3,106 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Radikhub</title>
+  <link rel="icon" href="icon-round.png" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <head>
-    <meta charset="utf-8">
-    <title>Radikhub</title>
-    <link rel="icon" href="icon-round.png" type="image/x-icon">
-    <style>
-      .a {
-        text-decoration: none;
-      }
+    .radik {
+      text-decoration: none;
+    }
 
-      .dropbtn {
-        background-color: #ed0909;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-      .dropbtn:hover,
-      .dropbtn:focus {
-        background-color: #B22222;
-      }
+    header {
+      background-color: #ed0909;
+      padding: 10px;
+      text-align: center;
+      flex-shrink: 0;
+    }
 
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
+    h1 {
+      margin: 0;
+      color: white;
+    }
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
+    nav {
+      background-color: #B22222;
+      padding: 10px;
+    }
 
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-      .dropdown a:hover {
-        background-color: #ddd;
-      }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
 
-      .show {
-        display: block;
-      }
-    </style>
-  </head>
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    nav ul li a:hover {
+      background-color: #711616;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #B22222;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
 
 <body>
-  <h1><a href="index.html" style="color:red">Radikhub</a></h1>
 
+  <header>
+    <h1><a class="radik" href="index.html" style="color: white;">Radikhub</a></h1>
+  </header>
 
-  <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn"> Меню</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="index.html">Главная</a>
-      <a href="2.html">Выбор предмета</a>
-      <a href="5.html">Заказ</a>
-      <a href="3.html">Контакты</a>
-      <a href="profil.html">Профиль</a>
-    </div>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="2.html">Выбор предмета</a></li>
+      <li><a href="5.html">Заказ</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+      <li><a href="profil.html">Профиль</a></li>
+    </ul>
+  </nav>
 
-  <script>
-    /* Когда пользователь нажимает на кнопку, переключаться раскрывает содержимое */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    // Закрыть раскрывающийся список, если пользователь щелкнет за его пределами.
-    window.onclick = function (event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-  </script>
   <main>
     <h2>Добро пожаловать!</h2>
   </main>
 
+  <footer>
+    <p>&copy; Radikhub, 2023</p>
+  </footer>
 
 </body>
-<footer>
-  <p>&copy; Radikhub, 2023</p>
-</footer>
 
 </html>
