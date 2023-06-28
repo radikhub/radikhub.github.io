@@ -6,131 +6,62 @@
   <meta charset="utf-8">
   <title>Radikhub</title>
   <link rel="icon" href="icon-round.png" type="image/x-icon">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    .radik {
-      text-decoration: none;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: #ed0909;
-      padding: 10px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    h1 {
-      margin: 0;
-      color: white;
-    }
-
-    nav {
-      background-color: #B22222;
-      padding: 10px;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 5px 10px;
-    }
-
-    nav ul li a:hover {
-      background-color: #711616;
-    }
-
-    main {
-      flex-grow: 1;
-      padding: 20px;
-      text-align: center;
-    }
-
-    footer {
-      background-color: #B22222;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    /* Скрыть список меню на мобильных устройствах */
-    .menu-btn {
-      display: none;
-    }
-
-    /* Отображение кнопки меню на мобильных устройствах */
-    @media (max-width: 600px) {
-      .menu-btn {
-        display: block;
-        cursor: pointer;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      nav.active ul {
-        display: block;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    // JavaScript для выделения текущей вкладки меню
+    window.addEventListener('DOMContentLoaded', function () {
+      var currentLocation = window.location.href;
+      var menuItems = document.querySelectorAll('nav ul li a');
+      menuItems.forEach(function (item) {
+        if (item.href === currentLocation) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
 
   <header>
-    <h1><a class="radik" href="index.html" style="color: white;">Radikhub</a></h1>
+    <h1><a class="radik" href="index.html">Radikhub</a></h1>
   </header>
 
   <nav>
-    <div class="menu-btn">&#9776;</div>
     <ul>
       <li><a href="index.html">Главная</a></li>
-      <li><a href="2.html">Выбор предмета</a></li>
-      <li><a href="5.html">Заказ</a></li>
+      <li><a href="predmet.html">Выбор предмета</a></li>
+      <li><a href="zakaz.html">Заказ</a></li>
       <li><a href="contact.html">Контакты</a></li>
       <li><a href="profil.html">Профиль</a></li>
     </ul>
   </nav>
 
+
   <main>
-    <h2>Добро пожаловать!</h2>
+    <div class="container">
+
+      <h2>Добро пожаловать!</h2>
+      <p>Добро пожаловать на наш сайт, предоставляющий услугу заказа выполнения работ в университете!</p>
+      <p>Мы понимаем, что учеба может быть иногда трудной и занимательной, поэтому мы здесь, чтобы помочь вам справиться
+        с
+        заданиями, проектами и исследованиями. Наша команда опытных и квалифицированных специалистов готова взять на
+        себя
+        трудности и облегчить вашу учебную нагрузку.</p>
+      <p>Чтобы воспользоваться нашими услугами, просто выберите нужный предмет, укажите требования и сроки, а мы сделаем
+        все возможное, чтобы предоставить вам качественное и своевременное выполнение работы.</p>
+      <p>Мы гарантируем конфиденциальность, уникальность и профессиональный подход к каждому заказу. Наша цель - помочь
+        вам
+        достичь успеха в учебе и освободить время для других важных задач.</p>
+      <p>Не откладывайте на завтра то, что мы можем выполнить уже сегодня! Присоединяйтесь к нашему сообществу
+        удовлетворенных клиентов и получите качественное выполнение работ в университете.</p>
+      <p>С уважением,<br>Команда нашего сайта</p>
+    </div>
   </main>
 
   <footer>
     <p>&copy; Radikhub, 2023</p>
   </footer>
-
-  <script>
-    // Добавление обработчика события для кнопки меню
-    document.querySelector('.menu-btn').addEventListener('click', function() {
-      document.querySelector('nav').classList.toggle('active');
-    });
-  </script>
 
 </body>
 
