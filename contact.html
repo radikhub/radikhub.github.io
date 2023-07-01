@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>Radikhub</title>
   <link rel="icon" href="icon-round.png" type="image/x-icon">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="predmet.css">
   <script>
     // JavaScript для выделения текущей вкладки меню
     window.addEventListener('DOMContentLoaded', function () {
@@ -17,6 +17,11 @@
           item.classList.add('active');
         }
       });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      var yearElement = document.getElementById('currentYear');
+      var currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
     });
   </script>
 </head>
@@ -42,14 +47,15 @@
     <div class="form-group">
       <input type="button" class="form-group" value="Бот группы в вк"
         onclick="window.location.href='https://vk.com/im?media=&sel=-219465195'">
-      <input type="button" class="form-group" value="Канал в тг"><br><br>
+      <input type="button" class="form-group" value="Канал в тг"
+        onclick="window.location.href='https://t.me/+SCKOsGxuVyE2NTgy'"><br><br>
       <input type="button" class="form-group" value="Отзывы">
       <input type="button" class="form-group" value="Вопросы и предложения">
     </div>
   </main>
 
   <footer>
-    <p>&copy; Radikhub, 2023</p>
+    <p>&copy; Radikhub, <span id="currentYear"></span></p>
   </footer>
 
 </body>

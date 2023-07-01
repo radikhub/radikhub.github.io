@@ -4,6 +4,7 @@
 
 .radik {
     text-decoration: none;
+    color: white;
 }
 
 .form-group input {
@@ -94,4 +95,8 @@ footer {
     padding: 10px;
     text-align: center;
     flex-shrink: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

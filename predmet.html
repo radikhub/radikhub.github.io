@@ -18,6 +18,11 @@
         }
       });
     });
+    document.addEventListener('DOMContentLoaded', function () {
+      var yearElement = document.getElementById('currentYear');
+      var currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+    });
   </script>
 </head>
 
@@ -41,14 +46,14 @@
   <main>
     <h2> Выбор предмета:</h2>
     <div class="form-group">
-      <input type="button" value="Информатика" onclick="window.location.href='inf.html'">
-      <input type="button" value="Языки программирования" onclick="window.location.href='yap.html'">
-      <input type="button" value="Электроника и схемотехника" onclick="window.location.href='el.html'">
+      <input type="button" value="Информатика" onclick="window.location.href='inf/inf.html'">
+      <input type="button" value="Языки программирования" onclick="window.location.href='yap/yap.html'">
+      <input type="button" value="Электроника и схемотехника" onclick="window.location.href='el/el.html'">
     </div>
   </main>
 
   <footer>
-    <p>&copy; Radikhub, 2023</p>
+    <p>&copy; Radikhub, <span id="currentYear"></span></p>
   </footer>
 
 </body>

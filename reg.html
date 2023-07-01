@@ -4,7 +4,7 @@
 <head>
 	<title>Регистрация</title>
 	<link rel="icon" href="icon-round.png" type="image/x-icon">
-	<link rel="stylesheet" href="reg.css">
+	<link rel="stylesheet" href="input.css">
 	<script>
 		function sendForm() {
 			// Проверяем, введен ли логин
@@ -52,6 +52,11 @@
 			// Все проверки прошли успешно, можно отправить форму
 			return true;
 		}
+		document.addEventListener('DOMContentLoaded', function () {
+			var yearElement = document.getElementById('currentYear');
+			var currentYear = new Date().getFullYear();
+			yearElement.textContent = currentYear;
+		});
 	</script>
 </head>
 

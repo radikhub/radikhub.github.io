@@ -37,9 +37,10 @@ h1 {
 }
 
 .form-group input[type="submit"],
+.form-group input[type="reset"],
 .form-group input[type="button"] {
     width: auto;
-    padding: 8px 20px;
+    padding: 8px 15px;
     color: #fff;
     background-color: #ff0000;
     border: none;
@@ -48,6 +49,7 @@ h1 {
 }
 
 .form-group input[type="submit"]:hover,
+.form-group input[type="reset"]:hover,
 .form-group input[type="button"]:hover {
     background-color: rgb(162, 39, 39);
     transition: 0.2s;

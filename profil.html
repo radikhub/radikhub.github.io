@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Radikhub</title>
     <link rel="icon" href="icon-round.png" type="image/x-icon">
-    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="predmet.css">
     <script>
         // JavaScript для выделения текущей вкладки меню
         window.addEventListener('DOMContentLoaded', function () {
@@ -17,6 +17,11 @@
                     item.classList.add('active');
                 }
             });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var yearElement = document.getElementById('currentYear');
+            var currentYear = new Date().getFullYear();
+            yearElement.textContent = currentYear;
         });
     </script>
 </head>
@@ -49,7 +54,7 @@
     </main>
 
     <footer>
-        <p>&copy; Radikhub, 2023</p>
+        <p>&copy; Radikhub, <span id="currentYear"></span></p>
     </footer>
 
 </body>
