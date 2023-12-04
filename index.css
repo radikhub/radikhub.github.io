@@ -52,7 +52,7 @@ h1 {
   color: white;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 623px) {
   nav ul {
     display: flex;
     flex-wrap: nowrap;
@@ -83,6 +83,8 @@ h1 {
 }
 
 nav {
+  display: flex;
+  justify-content: space-around;
   background-color: #b22222;
   padding: 10px;
 }
@@ -95,6 +97,7 @@ nav ul {
 }
 
 nav ul li {
+  white-space: nowrap;
   display: inline;
   margin: 0 10px;
 }
