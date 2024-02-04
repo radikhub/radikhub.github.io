@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Radikhub</title>
+  <link rel="icon" href="icon-round.png" type="image/x-icon">
+  <link rel="stylesheet" href="news.css">
+  <script>
+    // JavaScript для выделения текущей вкладки меню
+    window.addEventListener('DOMContentLoaded', function () {
+      var currentLocation = window.location.href;
+      var menuItems = document.querySelectorAll('nav ul li a');
+      menuItems.forEach(function (item) {
+        if (item.href === currentLocation) {
+          item.classList.add('active');
+        }
+      });
+    });
+    
+    // скрипт для текущего года внизу страницы
+    document.addEventListener('DOMContentLoaded', function () {
+      var yearElement = document.getElementById('currentYear');
+      var currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+    }); 
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <h1><a class="radik" href="index.html">Radikhub</a></h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="news.html">Новости</a></li>
+      <li><a href="predmet.html">Выбор предмета</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <div class="container">
+
+      <h2>Новости</h2>
+      
+      <!-- Ссылки на вызов модальных окон-->
+ <a href="#win1" class="button button-red">О разделе</a>
+</br></br></br>
+<!-- Модальное окно №1 -->
+   <a href="#x" class="overlay" id="win1"></a>
+   <div class="popup">
+    <p>Привет. Здесь будут новости об изменениях на сайте.</p>
+    <p>Мы стараемся не стоять на месте и по мере возможности и при наличии идей, улучшать сайт.</p>
+    <p>В этом очень сильно можете помочь именно Вы. Так как непосредственно студент, пользователь, использующий наш сайт получает более подробное представление о сайте и может предложить какие-то идеи для улучшения со стороны улучшения дизайна, расположения разделов и тд.</p>
+    <p>Напоминаем, что, если у Вас появилась такая идея, то ждём Вас в сообществе в вк или в канале в телеграмме, где вы можете предложить Вашу идею и возможно в скором времени она появится на сайте.</p>
+    <p>С уважением, Команда нашего сайта</p> 
+    <a class="close"title="Закрыть" href="#close"></a>
+    
+    </div>
+    <h1>Последние новости</h1>
+      <ul class="news-list">
+
+        <li class="news-item">
+          <h2>Добавлены задания к лабораторным работам по Электронике и схемотехнике.</h2>
+          <p>Теория к работам находится непосредственно в файлах с заданиями!</p>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Задания" 
+                  onclick="window.location.href='el/lab/lab.html'">
+           </div>
+          </p>
+          <p><em>Дата: 04.02.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены задания к лабораторным работам по С.</h2>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Задания" 
+                  onclick="window.location.href='yap/lab/C/C.html'">
+           </div>
+          </p>
+          <p><em>Дата: 03.02.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены лекции к лабораторным работам по С.</h2>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Лекции" 
+                  onclick="window.location.href='yap/metod/C/C.html'">
+           </div>
+          </p>
+          <p><em>Дата: 02.02.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Исправлен формат длинных кнопок.</h2>
+          <p>Теперь длинные кнопки не вылезают за края экрана телефонов.</p>
+          <p><em>Дата: 29.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены лекции к лабораторным работам по Паскаль.</h2>
+          <p>Добавлены лекции к лабораторным работам по паскаою. Но некоторых лекций пока что нет. Если у вас есть файлы этих лекций, напишите мне для добавления их на сайт.</p>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Лекции" 
+                  onclick="window.location.href='yap/metod/pascal/pascal.html'">
+           </div>
+          </p>
+          <p><em>Дата: 29.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены задания к лабораторным работам по Паскаль.</h2>
+          <p>Внимание! В первых четырёх лабораторных работах по паскалю теория находится в файле с заданиями. <br> В них идёт сначала теория, потом задания. 
+            Теория к последующим лабораторным работам находится в лекциях по дисциплине(позже скорее всего появятся на сайте). <br> 
+            Прошу учесть этот момент при выполнении данных лабораторных работ.</p>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Задания" 
+                  onclick="window.location.href='yap/lab/pascal/pascal.html'">
+           </div>
+          </p>
+          <p><em>Дата: 27.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены задания к лабораторным работам по Linux и Assembler.</h2>
+          <p>Внимание! Файлы по линуксу и ассемблеру в методичках и в лабораторных работах одинаковые. <br> В них идёт сначала теория, потом задания. 
+            Прошу учесть этот момент при выполнении данных лабораторных работ.</p>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Linux" 
+                  onclick="window.location.href='inf/lab/linux/linux.html'">
+              <input 
+                type="button" 
+                value="Assembler" 
+                  onclick="window.location.href='inf/lab/assembler/assembler.html'">
+           </div>
+          </p>
+          <p><em>Дата: 27.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены задания к лабораторным работам по Excel.</h2>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Excel" 
+                  onclick="window.location.href='inf/lab/excel/excel.html'">
+           </div>
+          </p>
+          <p><em>Дата: 25.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлены задания к лабораторным работам по Word.</h2>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Word" 
+                  onclick="window.location.href='inf/lab/word/word.html'">
+           </div>
+          </p>
+          <p><em>Дата: 24.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Исправлены лекции к лабораторным работам по Word.</h2>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Word" 
+                  onclick="window.location.href='inf/metod/word/word.html'">
+           </div>
+          </p>
+          <p><em>Дата: 24.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлен раздел с заданиями к лабораторным работам.</h2>
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Задания"
+                  onclick="window.location.href='inf/lab/lab.html'">
+           </div>
+          </p>
+          <p><em>Дата: 24.01.2024</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Исправлено меню навигации для мобильных устройств.</h2>
+          <p>Теперь меню навигации на мобильных устройствах представленно в виде горизонтальной, листаемой ленты.<br> Чтобы все кнопки разделов не пытались вместиться в ширину экрана.
+          </p>
+          <p><em>Дата: 05.12.2023</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Добавлен раздел C в Языках программирования.</h2>
+          <p>Появились некоторые методички по С, находятся в соответствующем разделе:
+            <div class="form-group">
+              <input 
+                type="button"
+                value="С" 
+                  onclick="window.location.href='yap/metod/C/C.html'">
+           </div>
+          </p>
+          <p><em>Дата: 04.12.2023</em></p>
+        </li>
+
+        <li class="news-item">
+          <h2>Разделение на два курса.</h2>
+          <p>Методички по электронике и схемотехнике теперь разбиты по соответствующим Первому и Второму курсу. Ссылка:
+            <div class="form-group">
+              <input 
+                type="button" 
+                value="Электроника и схемотехника" 
+                  onclick="window.location.href='el/el.html'">
+            </div>
+          </p>
+          <p><em>Дата: 04.12.2023</em></p>
+        </li>
+
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;2023-<span id="currentYear"></span></p>
+  </footer>
+
+</body>
+
+</html>

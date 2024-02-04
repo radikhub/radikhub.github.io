@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Radikhub</title>
+  <link rel="icon" href="icon-round.png" type="image/x-icon">
+  <link rel="stylesheet" href="predmet.css">
+  <script>
+    // JavaScript для выделения текущей вкладки меню
+    window.addEventListener('DOMContentLoaded', function () {
+      var currentLocation = window.location.href;
+      var menuItems = document.querySelectorAll('nav ul li a');
+      menuItems.forEach(function (item) {
+        if (item.href === currentLocation) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // скрипт для текущего года внизу страницы
+    document.addEventListener('DOMContentLoaded', function () {
+      var yearElement = document.getElementById('currentYear');
+      var currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+    });
+  </script>
+</head>
+
+<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Radikhub</title>
+    <link rel="icon" href="icon-round.png" type="image/x-icon">
+    <link rel="stylesheet" href="predmet.css">
+    <script>
+      // JavaScript для выделения текущей вкладки меню
+      window.addEventListener('DOMContentLoaded', function () {
+        var currentLocation = window.location.href;
+        var menuItems = document.querySelectorAll('nav ul li a');
+        menuItems.forEach(function (item) {
+          if (item.href === currentLocation) {
+            item.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </head>
+  
+  <header>
+      <h1><a class="radik" href="index.html">Radikhub</a></h1>
+    </header>
+  
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="predmet.html">Выбор предмета</a></li>
+  
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  <main>
+    <div class="container">
+
+      <h2>Добро пожаловать!</h2>
+      <p>На нашем сайте выложены в свободный доступ методички и задания к лабораторным работам по следующим предметам: информатика, языки программирования, электроника и схемотехника.</p>
+      <p>В разделе "Контакты" есть ссылка на сообщество в вк, на канал в телеграмме, на мои личные страницы в вк и тг. </p>
+      <p>Если вы видите что методичка на сайте отличается от той, что вам прислал преподаватель, убедительная просьба сообщить нам об этом, связавшись по контактам(личные вк или тг).</p>
+      <p>Там же принимаются предложения по улучшению сайта, по добавлению новых предметов. Ведь он в первую очередь сделан для вашего удобства обучения в РГРТУ.</p>
+      <p>С уважением, Команда нашего сайта</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;2023-<span id="currentYear"></span></p>
+  </footer>
+
+</body>
+
+</html>
