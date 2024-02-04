@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Radikhub</title>
+    <link rel="icon" href="../icon-round.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../predmet.css" />
+    <script>
+      // JavaScript для выделения текущей вкладки меню
+      window.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.href;
+        var menuItems = document.querySelectorAll("nav ul li a");
+        menuItems.forEach(function (item) {
+          if (item.href === currentLocation) {
+            item.classList.add("active");
+          }
+        });
+      });
+
+      // скрипт для текущего года внизу страницы
+      document.addEventListener("DOMContentLoaded", function () {
+        var yearElement = document.getElementById("currentYear");
+        var currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a class="radik" href="../index.html" style="color: white">Radikhub</a>
+      </h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../news.html">Новости</a></li>
+        <li><a href="../predmet.html">Выбор предмета</a></li>
+        <li><a href="../contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Информатика:</h2>
+      <div class="form-group">
+        <input
+          type="button"
+          value="Методички"
+          onclick="window.location.href='metod/metod.html'"
+        />
+        <input
+          type="button"
+          value="Лабораторные работы"
+          onclick="window.location.href='lab/lab.html'"
+        /><br /><br />
+        <input
+          type="button"
+          class="back"
+          value="Назад"
+          onclick="window.location.href='../predmet.html'"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy;2023-<span id="currentYear"></span></p>
+    </footer>
+  </body>
+</html>

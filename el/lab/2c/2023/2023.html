@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Radikhub</title>
+    <link rel="icon" href="../../../../icon-round.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../long_text_button.css">
+    <script>
+        // JavaScript для выделения текущей вкладки меню
+        window.addEventListener('DOMContentLoaded', function () {
+            var currentLocation = window.location.href;
+            var menuItems = document.querySelectorAll('nav ul li a');
+            menuItems.forEach(function (item) {
+                if (item.href === currentLocation) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var yearElement = document.getElementById('currentYear');
+            var currentYear = new Date().getFullYear();
+            yearElement.textContent = currentYear;
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a class="radik" href="../../../../index.html" style="color: white;">Radikhub</a></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../../../index.html">Главная</a></li>
+            <li><a href="../../../../news.html">Новости</a></li>
+            <li><a href="../../../../predmet.html">Выбор предмета</a></li>
+            <li><a href="../../../../contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Лабораторные работы(2023):</h2>
+        <div class="form-group">
+            <input 
+                type="button" 
+                value="1.Анализ схем на постоянном токе и моделирование в системе MICROCAP" 
+                onclick="window.location='1.pdf'">
+            <input 
+                type="button" 
+                value="2.Анализ  и моделирование фильтров на переменном токе" 
+                onclick="window.location='2.pdf'">
+            <br><br>
+            <input 
+                type="button" 
+                value="3.(отсутствует)
+                ." 
+                onclick="window.location='3.pdf'">
+            <input 
+                type="button" 
+                value="4.Усилительнве каскады с гальванической связью" 
+                onclick="window.location='4.pdf'">
+            <br><br>
+            <input 
+                type="button" 
+                value="5.Применение  усилителей с гальванической связью" 
+                onclick="window.location='5.pdf'">
+            <input 
+                type="button" 
+                value="6.Решающие усилители
+                ." 
+                onclick="window.location='6.pdf'">
+            <br><br>
+            <input 
+                type="button" 
+                value="7.Интегрирующий и дифференцирующий решающие усилители" 
+                onclick="window.location='7.pdf'">
+            <input 
+                type="button" 
+                value="8.Дифференцирующий решающий усилитель
+                ." 
+                onclick="window.location='8.pdf'">
+            <br><br>
+            <input 
+                type="button" 
+                value="Назад" 
+                class="back"
+                onclick="window.location.href='../2c.html'">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2023-<span id="currentYear"></span></p>
+    </footer>
+
+</body>
+
+</html>
